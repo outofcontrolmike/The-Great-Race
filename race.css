@@ -8,9 +8,28 @@ html {
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
+
 }
 
 .mario > img{
-    width: 300px;
-    height: 600px;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    left: 500px;
+    top: 300px;
+}
+
+.star > img{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 550px;
+    top: 100px;
+}
+
+.flag > Img {
+    width: 200px;
+    height: 300px;
+    left: 1000px;
+    position: relative;
 }

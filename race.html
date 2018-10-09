@@ -8,21 +8,20 @@
 <head>
     <meta charset = "UTF-8">
     <link href="race.css" rel="stylesheet" >
-    <script src="race.js"></script>
     <title>The Great Race Between Mario and Yoshi</title>
 </head>
 
 <body>
     <div class="star">
-        <img src="off.png" alt="black star"></div>
+        <img src="off.png" onclick="changeStar()" alt="black star"/>
+    </div>
 
-    <div class="mario">
+    <div class="mario"> <img src="yoshi.png" alt="Yoshi standing" >
         <img src="mario.png" alt="mario standing">
     </div>
-
-    <div class="yoshi">
-        <img src="yoshi.png" alt="Yoshi standing">
+    <div class="flag">
+        <img src="flag.png" alt="Finish Flag">
     </div>
-
+    <script src="race.js"></script>
 </body>
 </html>
