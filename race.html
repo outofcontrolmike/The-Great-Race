@@ -11,17 +11,14 @@
     <title>The Great Race Between Mario and Yoshi</title>
 </head>
 
-<body>
-    <div class="star">
-        <img src="off.png" onclick="changeStar()" alt="black star"/>
-    </div>
+<body>        
+        <div class="container">
+            <img id="star" src="off.png" alt="blackstar">
+            <img id="mario" src="mario.png" alt="mariostanding">
+            <img id="yoshi" src="yoshi.png" alt="yoshistanding">
+            <img id="flag" src="flag.png" alt="finishflag">
+        </div>
 
-    <div class="mario"> <img src="yoshi.png" alt="Yoshi standing" >
-        <img src="mario.png" alt="mario standing">
-    </div>
-    <div class="flag">
-        <img src="flag.png" alt="Finish Flag">
-    </div>
-    <script src="race.js"></script>
+        <script src="race.js"></script>
 </body>
 </html>

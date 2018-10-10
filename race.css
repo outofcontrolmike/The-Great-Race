@@ -11,25 +11,34 @@ html {
 
 }
 
-.mario > img{
+ div.container > #yoshi{
     width: 150px;
     height: 200px;
-    position: relative;
-    left: 500px;
-    top: 300px;
+    position: fixed;
+    left: 0px;
+    bottom:0px;
 }
 
-.star > img{
+div.container > #mario{
+    width: 150x;
+    height: 200px;
+    position: fixed;
+    left: 0px;
+    top: 200px;
+}
+
+div.container > #star{
     width: 200px;
     height: 200px;
-    position: relative;
+    position: fixed;
     left: 550px;
-    top: 100px;
+    top: 0px;
 }
 
-.flag > Img {
+div.container > #flag {
     width: 200px;
-    height: 300px;
-    left: 1000px;
-    position: relative;
+    height: 600px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
 }
