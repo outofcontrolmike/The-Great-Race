@@ -13,17 +13,14 @@ function startRace(){
      marioRun = document.getElementById('mario').src = "mariorun.png";
      yoshiRun = document.getElementById('yoshi').src = "yoshirun.png";
      
-}
 
 // function that starts race
 
-var moveMario = document.getElementById('mario');
-var moveYoshi = document.getElementById('yoshi');
-var moveLight = document.getElementById('star');
+document.getElementById('mario').style.left = 0;
+document.getElementById('yoshi').style.left = 0;
 
-moveLight.addEventListener("click", moveImage);
-myTimer = setInterval(moveImage, 3000);
-
-function moveImage() {
-    document.getElementById('mario').style.right;
-}   document.getElementById('yoshi').style.right;
+setInterval(function(){
+    var rand = Math.round(Math.random() * 20);
+    document.getElementById('mario').style.left = (parseInt(document.getElementById('mario').style.left) + rand) + 'px';
+    document.getElementById('yoshi').style.left = (parseInt(document.getElementById('yoshi').style.left) + rand) + 'px';
+}, 500)}
