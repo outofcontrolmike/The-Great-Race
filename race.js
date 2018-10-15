@@ -9,17 +9,18 @@ var yoshiRun = document.getElementById('yoshi');
 stopLight.addEventListener("click", startRace);
 
 function startRace(){
+
      stopLight = document.getElementById('star').src = "on.png";
      marioRun = document.getElementById('mario').src = "mariorun.png";
      yoshiRun = document.getElementById('yoshi').src = "yoshirun.png";
      document.getElementById('mario').style.left = 0;
-    document.getElementById('yoshi').style.left = 0;
+     document.getElementById('yoshi').style.left = 0;
 
 // function that starts race
 
 var myTime = setInterval(startRace, 10);
-var marioRacer = document.getElementById('mario')
-var yoshiRacer = document.getElementById('yoshi');
+var marioRacer = marioRun;
+var yoshiRacer = yoshiRun;
 
 function startRace() {
     var rand = Math.round(Math.random() * 20);
@@ -47,3 +48,8 @@ function myStopFunction() {
 }}
 
 // Function that preprares load up screen by clicking winner
+
+
+// Need to figure out how to make characters stop at a certain pixel
+
+// Need to figure out how to click winner and reset page.  Maybe have it to where I can click on either or image?  
