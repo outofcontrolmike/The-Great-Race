@@ -14,7 +14,7 @@ html {
  div.container > #yoshi{
     width: 150px;
     height: 200px;
-    position: fixed;
+    position: absolute;
     right: 500px;
     bottom:0px;
 }
@@ -22,7 +22,7 @@ html {
 div.container > #mario{
     width: 150x;
     height: 200px;
-    position: fixed;
+    position: absolute;
     left: 500px;
     top: 420px;
 }
