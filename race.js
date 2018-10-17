@@ -53,13 +53,17 @@ function startRace() {
 }}
 
 // Function that preprares load up screen by clicking winner
-let marioStand = document.getElementById('mario').src="mario.png";
-let yoshiStand = document.getElementById('yoshi').src="yoshi.png";
-let goLoad =     document.getElementById('star').src="off.png";
+flagChange.addEventListener("click", resetPage);
+
 
 function resetPage() {
     document.getElementById()
 }
+let marioStand = document.getElementById('mario').src = "mario.png";   
+let yoshiStand = document.getElementById('yoshi').src = "yoshi.png";
+let starChange =     document.getElementById('star').src = "off.png";
+let flagChange = document.getElementById('flag').src = "flag.png";
+
 
 // Need to figure out how to make characters stop at a certain pixel
 
