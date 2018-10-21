@@ -38,7 +38,7 @@ div.container > #star{
 div.container > #flag {
     width: 200px;
     height: 600px;
-    right: 0px;
+    right: 300px;
     bottom: 0px;
     position: fixed;
 }

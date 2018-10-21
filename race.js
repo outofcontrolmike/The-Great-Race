@@ -1,70 +1,98 @@
 
-// Three events that will happen/ declaring variables
+
+// Three divs to grab for image swap
     let stopLight = document.getElementById('star');
     let marioRun = document.getElementById('mario');
     let yoshiRun = document.getElementById('yoshi');
 
-// function that prepares race, swaps images
 
+// onlick event for starting race by clicking stopLight variable
+    stopLight.addEventListener("click", startRace);
 
-stopLight.addEventListener("click", startRace);
+// function that runs the click event and swaps images and styles the racers to the left.
+// 2nd function makes characters race by random generated number with pixles added.
 
-
-function startRace(){
+function startRace() {
 
      stopLight = document.getElementById('star').src = "on.png";
      marioRun = document.getElementById('mario').src = "mariorun.png";
      yoshiRun = document.getElementById('yoshi').src = "yoshirun.png";
-     document.getElementById('mario').style.left = 0;
-     document.getElementById('yoshi').style.left = 0;
+     document.getElementById('mario').style.left = "0px";
+     document.getElementById('yoshi').style.left = "0px";
 
-// function that starts race
+// function that generates random number for racers and starts a timer.  
 
-    var myTime = setInterval(startRace, 20);
+    var myTime = setInterval(takeOff, 50); 
+
+function takeOff() {
+    var rand = Math.round(Math.random() * 10);
+    var rand2 = Math.round(Math.random() * 10);
+    let marioRacer = document.getElementById('mario').style.left
+    let yoshiRacer = document.getElementById('yoshi').style.left
    
-// 
-function startRace() {
-    var rand = Math.round(Math.random() * 20);
-    var rand2 = Math.round(Math.random() *20);
-    let marioRacer = document.getElementById('mario').style.left = (parseInt(document.getElementById('mario').style.left) + rand2) + 'px';
-    let yoshiRacer = document.getElementById('yoshi').style.left = (parseInt(document.getElementById('yoshi').style.left) + rand) + 'px';
+    marioRacer = document.getElementById('mario').style.left = (parseInt(document.getElementById('mario').style.left) + rand) + "px";
+    yoshiRacer = document.getElementById('yoshi').style.left = (parseInt(document.getElementById('yoshi').style.left) + rand2) + "px";
 
    //testing purposes
    console.log(rand2);
    console.log(marioRacer);
 
    //if statment to stop racer at finsh point
+    if (marioRacer >= "1200px") {
+    myStop();
+
+}   else if (yoshiRacer >= "1200px") {
+}   myStop();
 
 
-    if (marioRacer >= 1200) {
-    alert("Mario is number 1!");
-    myStopFunction();
-
-}   else if (yoshiRacer >= 1200) {
-    alert("Yoshi wins the race!");
-}   myStopFunction();
-
-
-
-/*function myStopFunction() {
+/*function myStop() {
     clearInterval(myTime)
-*/ 
+*/
 
 }}
 
-// Function that preprares load up screen by clicking winner
-flagChange.addEventListener("click", resetPage);
 
+// Function that preprares load up screen by clicking winner
+
+    let marioStand = document.getElementById('mario'); 
+    let yoshiStand = document.getElementById('yoshi');
+    let starChange = document.getElementById('star');
+    let flagAction = document.getElementById('flag');
+
+    flagAction.addEventListener("click", resetPage);
 
 function resetPage() {
-    document.getElementById()
+    marioStand = document.getElementById('mario').src = "mariowin.png"; 
+    yoshiStand = document.getElementById('yoshi').src = "yoshiwin.png";
+    starChange = document.getElementById('star').src = "off.png";
 }
-let marioStand = document.getElementById('mario').src = "mario.png";   
-let yoshiStand = document.getElementById('yoshi').src = "yoshi.png";
-let starChange =     document.getElementById('star').src = "off.png";
-let flagChange = document.getElementById('flag').src = "flag.png";
 
 
-// Need to figure out how to make characters stop at a certain pixel
 
-// Need to figure out how to click winner and reset page.  Maybe have it to where I can click on either or image?  
+
+
+
+
+/*
+
+*If Statement - Can not figure out how to get If statment to read 
+characters reaching a certain pixel on screen and stopping the race. 
+
+*myStop Function - Racer's won't move across screen if it's activated.
+
+*resetPage function - 
+
+I wanted to be able to have the option to click the flag and reset the page.
+All I was able to get was swapping the images out.  The characters won't style back to the 
+left of the screen since my race never stops.  The If statment does work, I tested with alert command.
+
+// if (marioRacer >= "1200px") {
+    alert("Mario is number 1!")
+    myStop();
+
+}   else if (yoshiRacer >= "1200px") {
+    (alert("yoshi wins!")
+}   myStop();
+*
+
+*/
