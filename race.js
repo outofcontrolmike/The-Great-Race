@@ -52,9 +52,9 @@ function takeOff()
 function myStop() 
 {
     clearInterval(myTime)
-
-
 }
+
+
 
 
 // Function that preprares load up screen by clicking winner
