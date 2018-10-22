@@ -23,7 +23,7 @@ function startRace()
 }
 // function that generates random number for racers and starts a timer.  
 
-var myTime = setInterval(takeOff, 50); 
+var myTime = setInterval(takeOff, 10); 
 
 function takeOff() 
 {
@@ -44,9 +44,12 @@ function takeOff()
     if (parseInt(marioRacer) >= 1200) {
     myStop();
 
-}   else if (parseInt(yoshiRacer) >= 1200) {
+}   else if (parseInt(yoshiRacer) >= 1200) 
+{
    myStop();
-}}
+}
+
+}
 
 
 function myStop() 
