@@ -42,3 +42,21 @@ div.container > #flag {
     bottom: 0px;
     position: fixed;
 }
+
+div.container > #yoshiWin {
+    width: 150px;
+    height: 200px;
+    right: 500px;
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
+}
+
+div.container > #winMario {
+    width: 150px;
+    height: 200px;
+    right: 600px; 
+    top: 300px;
+    position: fixed;
+    visibility: hidden;
+}
