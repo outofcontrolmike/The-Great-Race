@@ -1,6 +1,6 @@
 
 
-// Three divs to grab for image swap
+// Declaring variables for events
     let stopLight = document.getElementById('star');
     let marioRun = document.getElementById('mario');
     let yoshiRun = document.getElementById('yoshi');
@@ -14,8 +14,6 @@
     marioWin.addEventListener("click", startRace);
 
 // function that runs the click event and swaps images and styles the racers to the left.
-// 2nd function makes characters race by random generated number with pixles added.
-
 function startRace() 
 {
      stopLight = document.getElementById('star').src = "on.png";
@@ -24,8 +22,8 @@ function startRace()
      document.getElementById('mario').style.left = "0px";
      document.getElementById('yoshi').style.left = "0px";
 }
-// function that generates random number for racers and starts a timer.  
-
+// 2nd function makes characters race by random generated number with pixles added.
+// Also displays Winner
 var myTime = setInterval(takeOff, 10); 
 
 function takeOff() 
@@ -45,7 +43,6 @@ function takeOff()
     myStop();
     document.getElementById("yoshi").style.visibility = "hidden";
     document.getElementById('mario').style.visibility = "hidden";
-
     document.getElementById("winMario").style.visibility = "visible";
 
 }   else if (parseInt(yoshiRacer) >= 900) 
@@ -57,16 +54,21 @@ function takeOff()
 
 }
 
+    yoshiWin.addEventListener("click", revealImages);
+    marioWin.addEventListener("click", revealImages);
+
+function revealImages()
+{
+    document.getElementById("yoshi").style.visibility = "visible";
+    document.getElementById("mario").style.visibility = "visible";
+    document.getElementById("winMario").style.visibility = "hidden";
+    document.getElementById("yoshiWin").style.visibility = "hidden";
+}
+
+
 }
 
 function myStop() 
 {
     clearInterval(myTime)
 }
-
-
-
-
-// onlick event for starting race by clicking stopLight variable
-yoshiWin.addEventListener("click", startRace);
-marioWin.addEventListener("click", startRace);
