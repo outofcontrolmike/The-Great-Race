@@ -57,6 +57,7 @@ function takeOff()
     yoshiWin.addEventListener("click", revealImages);
     marioWin.addEventListener("click", revealImages);
 
+    // function that reveals images
 function revealImages()
 {
     document.getElementById("yoshi").style.visibility = "visible";
@@ -65,9 +66,18 @@ function revealImages()
     document.getElementById("yoshiWin").style.visibility = "hidden";
 }
 
+    // function to refernce startRace Function
+stopLight.addEventListener("click", restartRace);
+function restartRace()
+{
+    startRace();
+}
+
+
 
 }
 
+// This stops the interval
 function myStop() 
 {
     clearInterval(myTime)
