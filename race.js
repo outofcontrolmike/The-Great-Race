@@ -9,24 +9,23 @@
 
 
 // onlick event for starting race by clicking stopLight variable
-    stopLight.addEventListener("click", startRace);
-    yoshiWin.addEventListener("click", startRace);
-    marioWin.addEventListener("click", startRace);
+    document.getElementById('star').addEventListener("click", startRace);
+    yoshiWin.addEventListener("click", restartRace);
+    marioWin.addEventListener("click", restartRace);
 
 // function that runs the click event and swaps images and styles the racers to the left.
 function startRace() 
 {
-     stopLight = document.getElementById('star').src = "on.png";
+
+    stopLight = document.getElementById('star').src = "on.png";
      marioRun = document.getElementById('mario').src = "mariorun.png";
      yoshiRun = document.getElementById('yoshi').src = "yoshirun.png";
      document.getElementById('mario').style.left = "0px";
      document.getElementById('yoshi').style.left = "0px";
-}
-// 2nd function makes characters race by random generated number with pixles added.
-// Also displays Winner
-var myTime = setInterval(takeOff, 10); 
 
-function takeOff() 
+     var myTime = setInterval(takeOff, 10); 
+
+     function takeOff() 
 {
 
     var rand = Math.round(Math.random() * 10);
@@ -44,6 +43,7 @@ function takeOff()
     document.getElementById("yoshi").style.visibility = "hidden";
     document.getElementById('mario').style.visibility = "hidden";
     document.getElementById("winMario").style.visibility = "visible";
+    return;
 
 }   else if (parseInt(yoshiRacer) >= 900) 
 {
@@ -51,6 +51,9 @@ function takeOff()
    document.getElementById("yoshi").style.visibility = "hidden";
    document.getElementById('mario').style.visibility = "hidden";
    document.getElementById('yoshiWin').style.visibility = "visible";
+   return;
+
+}
 
 }
 
@@ -67,18 +70,22 @@ function revealImages()
 }
 
     // function to refernce startRace Function
-stopLight.addEventListener("click", restartRace);
-function restartRace()
-{
-    startRace();
-}
 
-
-
-}
+document.getElementById('star').addEventListener("click", restartRace);
 
 // This stops the interval
 function myStop() 
 {
     clearInterval(myTime)
+}
+
+}
+function restartRace()
+{
+    document.getElementById('mario').src = "mariorun.png";
+     document.getElementById('yoshi').src = "yoshirun.png";
+     document.getElementById('star').src = "off.png";
+     document.getElementById('mario').style.left = "0px";
+     document.getElementById('yoshi').style.left = "0px";
+
 }
